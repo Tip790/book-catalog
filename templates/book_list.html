@@ -7,7 +7,7 @@
     <h1>Book List</h1>
     <ul>
         {% for book in books %} 
-        <li>{{ book.title }} - {{ book.status }} - {{ book.publisher.name}}
+        <li>{{ book.title }} - {{ book.price }} - {{ book.publisher.name}}
         </li>
         {% for review in book.review_set.all %}
     <p>{{review.body}}</p>
