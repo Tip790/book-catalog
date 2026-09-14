@@ -17,11 +17,12 @@ class Book(models.Model):
     status = models.CharField(max_length=20, default="not in print")
     
     def __str__(self):
-        return self.title, self.status
+        return self.title
+        return self.status
     
 class Review(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
+    body = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.name
+        return self.body
